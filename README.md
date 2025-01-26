@@ -10,4 +10,4 @@
 ## _Service Info_
 - splash UI
 - intro Swiper
-- Sign Up / Sign In
+- [Clerk](https://clerk.com/) : 회원가입/로그인 로직 적용
