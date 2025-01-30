@@ -34,7 +34,7 @@ const Onboarding = () => {
         onIndexChanged={(index) => setActiveIndex(index)}
       >
         {onboarding.map((item) => (
-          <View key={item.id} className="flex items-cneter justify-center p-5">
+          <View key={item.id} className="flex items-center justify-center p-5">
             <Image
               source={item.image}
               className="w-full h-[300px]"
@@ -45,7 +45,7 @@ const Onboarding = () => {
                 {item.title}
               </Text>
             </View>
-            <Text className="text-lg font-JakartaSemiBold text-center text-[#858585] mx-10 mt-3">
+            <Text className="text-md font-JakartaSemiBold text-center text-[#858585] mx-10 mt-3">
               {item.description}
             </Text>
           </View>
@@ -59,7 +59,7 @@ const Onboarding = () => {
             ? router.replace("/(auth)/sign-up")
             : swiperRef.current?.scrollBy(1)
         }
-        className="w-11/12 mt-10"
+        className="w-[90%] mt-10 mb-5"
       />
     </SafeAreaView>
   );
