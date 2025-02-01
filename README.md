@@ -12,8 +12,8 @@
   - **splash**
   - **welcome** (without Login) : Swiper 적용
   - **home** (with Login) : 
-    - driver 확인
-    - 현재 사용자 위치 표시 (google Maps) (with `zustand`)
+    - 사용 내역 확인
+    - 현재 사용자 위치 표시 (google Maps) (with `zustand`) 
 - [Clerk](https://clerk.com/) : 회원가입/로그인 로직 적용
 - [Neon](https://neon.tech) : 데이터베이스 (Severless PostgreSQL)
   - `/(api)/user` (/app/(api)/user+api.ts) : 회원가입 시 데이터베이스에 user 정보 저장 
