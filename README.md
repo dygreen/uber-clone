@@ -13,10 +13,15 @@
   - **welcome** (without Login) : Swiper 적용
   - **home** (with Login) : 
     - 사용 내역 확인
-    - 현재 사용자 위치 표시 (google Maps) (with `zustand`) 
+    - 현재 사용자 위치 표시 (google Maps) (with `zustand`)
+    - 예약
+      1. 출발지 / 도착지 입력
+      2. 운전기사 찾기 및 선택
+      3. 결제 (Stripe)
 - [Clerk](https://clerk.com/) : 회원가입/로그인 로직 적용
 - [Neon](https://neon.tech) : 데이터베이스 (Severless PostgreSQL)
   - `/(api)/user` (/app/(api)/user+api.ts) : 회원가입 시 데이터베이스에 user 정보 저장 
+- [Stripe](https://stripe.com/) : 결제 처리 로직 적용
 
 ## _API Info_
 - maps API : [Geoapify](https://myprojects.geoapify.com/)
