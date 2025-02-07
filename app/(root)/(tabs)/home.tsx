@@ -150,15 +150,16 @@ export default function Page() {
         return;
       }
 
-      let location = await Location.getCurrentPositionAsync();
+      // NOTE: Google Maps API - 한국 드라이빙 모드 미지원 이슈로 임시 고정값 세팅
+      // let location = await Location.getCurrentPositionAsync();
       const address = await Location.reverseGeocodeAsync({
-        latitude: location.coords?.latitude!,
-        longitude: location.coords?.longitude!,
+        latitude: 40.758,
+        longitude: -73.9855,
       });
 
       setUserLocation({
-        latitude: location.coords?.latitude!,
-        longitude: location.coords?.longitude!,
+        latitude: 40.758,
+        longitude: -73.9855,
         address: `${address[0].name},  ${address[0].region}`,
       });
     };
