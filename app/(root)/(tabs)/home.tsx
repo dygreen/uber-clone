@@ -1,4 +1,4 @@
-import { SignedIn, useAuth, useUser } from "@clerk/clerk-expo";
+import { useAuth, useUser } from "@clerk/clerk-expo";
 import {
   FlatList,
   Text,
