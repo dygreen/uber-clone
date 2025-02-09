@@ -5,12 +5,23 @@ import { images } from "@/constants";
 import { useUser } from "@clerk/clerk-expo";
 import { useFetch } from "@/lib/fetch";
 import { Ride } from "@/types/type";
+import { useState } from "react";
 
 const Rides = () => {
   const { user } = useUser();
-  const { data: recentRides, loading } = useFetch<Ride[]>(
-    `/(api)/ride/${user?.id}`,
-  );
+  const [isRefreshing, setIsRefreshing] = useState<boolean>(false);
+
+  const {
+    data: recentRides,
+    loading,
+    refetch,
+  } = useFetch<Ride[]>(`/(api)/ride/${user?.id}`);
+
+  const handleRefresh = async () => {
+    setIsRefreshing(true);
+    await refetch();
+    setIsRefreshing(false);
+  };
 
   return (
     <SafeAreaView>
@@ -44,6 +55,8 @@ const Rides = () => {
             <Text className="text-2xl font-JakartaBold my-5">All Rides</Text>
           </>
         )}
+        refreshing={isRefreshing}
+        onRefresh={handleRefresh}
       />
     </SafeAreaView>
   );
