@@ -19,6 +19,7 @@
       2. 운전기사 찾기 및 선택
       3. 결제 (Stripe)
       4. 메인 페이지에서 최근 예약 내용 확인
+  - tabs : home, rides, chat, profile
 - [Clerk](https://clerk.com/) : 회원가입/로그인 로직 적용
 - [Neon](https://neon.tech) : 데이터베이스 (Severless PostgreSQL)
   - `/(api)/user` (/app/(api)/user+api.ts) : 회원가입 시 데이터베이스에 user 정보 저장 
